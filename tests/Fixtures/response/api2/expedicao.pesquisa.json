@@ -1,0 +1,50 @@
+{
+  "retorno": {
+    "status_processamento": "3",
+    "status": "OK",
+    "pagina": "1",
+    "numero_paginas": 1,
+    "expedicoes": [
+      {
+        "expedicao": {
+          "id": "440183098",
+          "tipoObjeto": "venda",
+          "idObjeto": "440183093",
+          "idAgrupamento": "0",
+          "situacao": "0",
+          "dataEmissao": "28/02/2018",
+          "formaEnvio": "C",
+          "identificacao": "Pedido 1000557",
+          "qtdVolumes": "0",
+          "valorDeclarado": "25,94",
+          "possuiValorDeclarado": "S",
+          "pesoBruto": "0,000",
+          "codigoRastreamento": "SG021791790BR",
+          "urlRastreamento": "",
+          "possuiAR": "N",
+          "embalagem": {
+            "tipo": "2",
+            "altura": "21,00",
+            "largura": "26,00",
+            "comprimento": "5,00",
+            "diametro": "0,00"
+          },
+          "destinatario": {
+            "nome": "Fulano",
+            "endereco": "",
+            "numero": "",
+            "complemento": "",
+            "bairro": "",
+            "cep": "",
+            "cidade": "",
+            "uf": ""
+          },
+          "formaFrete": {
+            "id": "439989105",
+            "descricao": "SEDEX HOJE (40290)"
+          }
+        }
+      }
+    ]
+  }
+}

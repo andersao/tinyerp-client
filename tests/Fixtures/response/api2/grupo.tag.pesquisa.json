@@ -1,0 +1,22 @@
+{
+  "retorno": {
+    "status_processamento": 3,
+    "status": "OK",
+    "pagina": "1",
+    "numero_paginas": "1",
+    "registros": [
+      {
+        "registro": {
+          "id": "37644487",
+          "nome": "Grupo Teste 2"
+        }
+      },
+      {
+        "registro": {
+          "id": "37644488",
+          "nome": "Grupo Teste 3"
+        }
+      }
+    ]
+  }
+}

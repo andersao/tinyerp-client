@@ -1,0 +1,26 @@
+{
+  "retorno": {
+    "status_processamento": "3",
+    "status": "OK",
+    "separacoes": [
+      {
+        "id": "444371693",
+        "idOrigem": "444325243",
+        "objOrigem": "venda",
+        "situacao": "1",
+        "dataCriacao": "11/08/2022",
+        "dataSeparacao": null,
+        "dataCheckout": null,
+        "destinatario": "Carlos Teste 123",
+        "idContato": "442817471",
+        "numero": "129",
+        "dataEmissao": "04/08/2022",
+        "idFormaEnvio": "443556202",
+        "numeroPedidoEcommerce": "",
+        "idOrigemVinc": "0",
+        "objOrigemVinc": "notafiscal",
+        "situacaoVenda": "4"
+      }
+    ]
+  }
+}

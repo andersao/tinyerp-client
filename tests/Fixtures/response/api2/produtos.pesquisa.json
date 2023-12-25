@@ -1,0 +1,36 @@
+{
+  "retorno": {
+    "status_processamento": 3,
+    "status": "OK",
+    "pagina": "1",
+    "numero_paginas": "1",
+    "produtos": [
+      {
+        "produto": {
+          "id": 46829062,
+          "codigo": 123,
+          "nome": "produto teste",
+          "preco": "1.20",
+          "preco_promocional": "1.10",
+          "preco_custo": "1.05",
+          "preco_custo_medio": "1.02",
+          "unidade": "UN",
+          "tipoVariacao": "P"
+        }
+      },
+      {
+        "produto": {
+          "id": 46829066,
+          "codigo": 1234,
+          "nome": "produto teste 2",
+          "preco": "15.25",
+          "preco_promocional": "13.10",
+          "preco_custo": "12.75",
+          "preco_custo_medio": "11.89",
+          "unidade": "PC",
+          "tipoVariacao": "N"
+        }
+      }
+    ]
+  }
+}

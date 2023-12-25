@@ -1,0 +1,48 @@
+{
+  "retorno": {
+    "status_processamento": 3,
+    "status": "OK",
+    "pagina": "1",
+    "numero_paginas": "1",
+    "vendedores": [
+      {
+        "vendedor": {
+          "id": 46829055,
+          "codigo": 123,
+          "nome": "Vendedor Teste",
+          "tipo_pessoa": "F",
+          "fantasia": "Teste",
+          "cpf_cnpj": "00000000000",
+          "email": "vendedor_teste@mail.com",
+          "endereco": "Rua Teste",
+          "numero": "123",
+          "complemento": "sala 1",
+          "bairro": "Centro",
+          "cep": "95700-000",
+          "cidade": "Bento Gonçalves",
+          "uf": "RS",
+          "situacao": "Ativo"
+        }
+      },
+      {
+        "vendedor": {
+          "id": 46829059,
+          "codigo": 125,
+          "nome": "Vendedor Teste 2",
+          "tipo_pessoa": "F",
+          "fantasia": "Teste 2",
+          "cpf_cnpj": "00000000001",
+          "email": "",
+          "endereco": "Rua Teste",
+          "numero": "123",
+          "complemento": "sala 1",
+          "bairro": "Centro",
+          "cep": "95700-000",
+          "cidade": "Bento Gonçalves",
+          "uf": "RS",
+          "situacao": "Ativo"
+        }
+      }
+    ]
+  }
+}

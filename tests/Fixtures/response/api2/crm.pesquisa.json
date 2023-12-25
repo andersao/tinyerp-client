@@ -1,0 +1,36 @@
+{
+  "retorno": {
+    "status_processamento": 3,
+    "status": "OK",
+    "pagina": "1",
+    "numero_paginas": "1",
+    "assuntos": [
+      {
+        "assunto": {
+          "id": 123456,
+          "cliente": "Cliente Teste",
+          "estagio_cliente": "C",
+          "texto_assunto": "Teste",
+          "proxima_acao": "Ligar",
+          "tipo_data_acao": "D",
+          "data_acao": "10/01/2015",
+          "estagio_assunto": "2",
+          "situacao_assunto": "A"
+        }
+      },
+      {
+        "assunto": {
+          "id": 123456,
+          "cliente": "Cliente Teste",
+          "estagio_cliente": "C",
+          "texto_assunto": "Teste",
+          "proxima_acao": "Ligar",
+          "tipo_data_acao": "Q",
+          "data_acao": "",
+          "estagio_assunto": "2",
+          "situacao_assunto": "A"
+        }
+      }
+    ]
+  }
+}

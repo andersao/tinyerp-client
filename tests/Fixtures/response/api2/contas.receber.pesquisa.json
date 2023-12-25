@@ -1,0 +1,23 @@
+{
+  "retorno": {
+    "status_processamento": "3",
+    "status": "OK",
+    "pagina": 1,
+    "numero_paginas": 1,
+    "contas": [
+      {
+        "id": "5489125",
+        "nome_cliente": "henrique teste 2",
+        "historico": "Ref. a NF nº 000453, henrique teste 2 (parcela 1/1)",
+        "numero_banco": "175/00064619-3",
+        "numero_doc": "000453/01",
+        "serie_doc": "2",
+        "data_vencimento": "08/07/2015",
+        "data_emissao": "10/07/2015",
+        "valor": "6.00",
+        "saldo": "1.00",
+        "situacao": "parcial"
+      }
+    ]
+  }
+}

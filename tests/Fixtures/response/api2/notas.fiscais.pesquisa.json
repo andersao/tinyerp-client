@@ -1,0 +1,61 @@
+{
+  "retorno": {
+    "status_processamento": "3",
+    "status": "OK",
+    "pagina": 1,
+    "numero_paginas": 1,
+    "notas_fiscais": [
+      {
+        "nota_fiscal": {
+          "id": "439995226",
+          "tipo": "S",
+          "serie": "1",
+          "numero": "000148",
+          "numero_ecommerce": null,
+          "data_emissao": "11/01/2018",
+          "nome": "henrique teste 1",
+          "cliente": {
+            "nome": "henrique teste 1",
+            "tipo_pessoa": "F",
+            "cpf_cnpj": "182.334.983-86",
+            "ie": "",
+            "endereco": "Rua teste",
+            "numero": "4",
+            "complemento": "casa",
+            "bairro": "Centro",
+            "cep": "95.700-000",
+            "cidade": "Bento Gonçalves",
+            "uf": "RS",
+            "fone": "(54) 1234-1234",
+            "email": "henrique1@tiny.com.br"
+          },
+          "endereco_entrega": {
+            "tipo_pessoa": "F",
+            "cpf_cnpj": "182.334.983-86",
+            "endereco": "Rua teste",
+            "numero": "4",
+            "complemento": "casa",
+            "bairro": "Centro",
+            "cep": "95.700-000",
+            "cidade": "Bento Gonçalves",
+            "uf": "RS",
+            "fone": "(54) 1234-1234",
+            "nome_destinatario": "henrique teste 1"
+          },
+          "transportador": {
+            "nome": ""
+          },
+          "valor": "165.51",
+          "valor_produtos": "152.34",
+          "valor_frete": "8.15",
+          "id_vendedor": "0",
+          "nome_vendedor": "",
+          "situacao": "1",
+          "descricao_situacao": "Pendente",
+          "codigo_rastreamento": "EE201798383BR",
+          "url_rastreamento": "http://www.issoehumaurl.com"
+        }
+      }
+    ]
+  }
+}
