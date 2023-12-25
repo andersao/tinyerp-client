@@ -15,7 +15,7 @@ class ContatoTest extends TestCase
      */
     public function testSearch()
     {
-        list($client, $httpClient) = $this->TinyERPSut();
+        list($client, $httpClient) = $this->tinyClientSut();
         $this->setDefaultMockResponse($httpClient, 'api2/contatos.pesquisa.json');
 
         $contatos = $client->contato->search();
@@ -51,7 +51,7 @@ class ContatoTest extends TestCase
      */
     public function testRetrieve()
     {
-        list($client, $httpClient) = $this->TinyERPSut();
+        list($client, $httpClient) = $this->tinyClientSut();
 
         $this->setDefaultMockResponse($httpClient, 'api2/contatos.obter.json');
 
@@ -114,7 +114,7 @@ class ContatoTest extends TestCase
      */
     public function testCreate()
     {
-        list($client, $httpClient) = $this->TinyERPSut();
+        list($client, $httpClient) = $this->tinyClientSut();
 
         $this->setDefaultMockResponse($httpClient, 'api2/contato.incluir.json');
 
@@ -171,7 +171,7 @@ class ContatoTest extends TestCase
      */
     public function testUpdate()
     {
-        list($client, $httpClient) = $this->TinyERPSut();
+        list($client, $httpClient) = $this->tinyClientSut();
 
         $httpClient->setDefaultResponse(
             $this->mockFixtureResponse('api2/contato.alterar.json')

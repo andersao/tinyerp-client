@@ -15,7 +15,7 @@ class ContaReceberTest extends TestCase
      */
     public function testSearch()
     {
-        list($client, $httpClient) = $this->TinyERPSut();
+        list($client, $httpClient) = $this->tinyClientSut();
         $this->setDefaultMockResponse($httpClient, 'api2/contas.receber.pesquisa.json');
 
         $contas = $client->contaReceber->search();

@@ -16,7 +16,7 @@ class ExpedicaoTest extends TestCase
      */
     public function testSearch()
     {
-        list($client, $httpClient) = $this->TinyERPSut();
+        list($client, $httpClient) = $this->tinyClientSut();
 
         $this->setDefaultMockResponse($httpClient, 'api2/expedicao.pesquisa.json');
 

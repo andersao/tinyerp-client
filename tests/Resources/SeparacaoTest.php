@@ -17,7 +17,7 @@ class SeparacaoTest extends TestCase
      */
     public function testSearch()
     {
-        list($client, $httpClient) = $this->TinyERPSut();
+        list($client, $httpClient) = $this->tinyClientSut();
 
         $this->setDefaultMockResponse($httpClient, 'api2/separacao.pesquisa.json');
 

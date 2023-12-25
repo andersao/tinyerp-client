@@ -15,7 +15,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
     /**
      * @return list{0:TinyClient, 1: Client, 2: Psr17Factory}
      */
-    public function TinyERPSut(): array
+    public function tinyClientSut(): array
     {
         $httpClient = new Client();
         $erpClient = new TinyClient(['token' => '1234567890', 'http_client' => $httpClient]);

@@ -39,7 +39,7 @@ class ClientTest extends TestCase
         $this->expectException(InvalidTokenException::class);
         $this->expectExceptionMessage('token invalido');
 
-        list($client, $httpClient) = $this->TinyERPSut();
+        list($client, $httpClient) = $this->tinyClientSut();
 
         $httpClient->setDefaultResponse(
             $this->mockFixtureResponse('api2/error_token_invalido.json')
@@ -58,7 +58,7 @@ class ClientTest extends TestCase
         $this->expectException(EmptyResponseException::class);
         $this->expectExceptionMessage('A Consulta não retornou registros');
 
-        list($client, $httpClient) = $this->TinyERPSut();
+        list($client, $httpClient) = $this->tinyClientSut();
 
         $httpClient->setDefaultResponse(
             $this->mockFixtureResponse('api2/error_consulta_vazia.json')
@@ -76,7 +76,7 @@ class ClientTest extends TestCase
     {
         $this->expectException(TooManyRequestsException::class);
 
-        list($client, $httpClient) = $this->TinyERPSut();
+        list($client, $httpClient) = $this->tinyClientSut();
 
         $httpClient->setDefaultResponse(
             $this->mockFixtureResponse('api2/error.json', 429),
@@ -94,7 +94,7 @@ class ClientTest extends TestCase
     {
         $this->expectException(ConflictException::class);
 
-        list($client, $httpClient) = $this->TinyERPSut();
+        list($client, $httpClient) = $this->tinyClientSut();
 
         $httpClient->setDefaultResponse(
             $this->mockFixtureResponse('api2/error_duplicidade.json',),
@@ -112,7 +112,7 @@ class ClientTest extends TestCase
      */
     public function testShouldSendRequiredParams(): void
     {
-        list($client, $httpClient) = $this->TinyERPSut();
+        list($client, $httpClient) = $this->tinyClientSut();
 
         $httpClient->setDefaultResponse($this->mockFixtureResponse('api2/info.json'));
         $client->info->retrieve();
