@@ -63,15 +63,17 @@ class TinyErrorPlugin implements Plugin
 
     protected function translateError(int $codigo, array $erros): void
     {
-        $message = join('\n', array_map(function ($error) {
+        $errors = array_map(function ($error) {
             return $error['erro'];
-        }, $erros)) ?? '';
+        }, $erros);
+
+        $message = join('\n', $errors) ?? '';
 
         match ($codigo) {
             2 => throw new InvalidTokenException($message),
             6, 11 => throw new TooManyRequestsException($message),
             30 => throw new ConflictException($message),
-            31 => throw new ValidationException($message),
+            31 => throw new ValidationException($errors),
             20 => throw new EmptyResponseException($message),
             99 => throw new ServiceUnavailableException($message),
             default => throw new \Exception($message),

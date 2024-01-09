@@ -15,7 +15,7 @@ trait Search
     }
 
     /**
-     * @return array<static>
+     * @return array
      * @throws ClientExceptionInterface
      */
     public function search(array $params = []): array
@@ -25,8 +25,8 @@ trait Search
         $query = http_build_query($params);
         $request = $this->requestFactory->createRequest('GET', sprintf('/%s?%s', $uri, $query));
         $content = json_decode($this->client->sendRequest($request)->getBody()->getContents(), true);
-        $collection = $content['retorno'][static::entityCollectionKey()];
 
+        $collection = $content['retorno'][static::entityCollectionKey()];
         $entityRootKey = static::entityRootKey();
 
         return array_map(function ($value) use ($entityRootKey) {

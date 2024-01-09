@@ -57,7 +57,7 @@ class ContatoTest extends TestCase
 
         $contato = $client->contato->retrieve(68790116);
 
-        $this->assertLastRequest($httpClient, 'GET', 'api2/contatos.obter.php');
+        $this->assertLastRequest($httpClient, 'GET', 'api2/contato.obter.php');
         $this->assertInstanceOf(Contato::class, $contato);
         $this->assertArrayContains([
             "id" => "68790116",

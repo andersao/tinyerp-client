@@ -2,10 +2,8 @@
 
 namespace Prettus\TinyERP\Resources\Actions;
 
-use GuzzleHttp\Psr7\Request;
 use Http\Discovery\Psr17Factory;
 use Psr\Http\Client\ClientExceptionInterface;
-use Http\Message\MessageFactory\GuzzleMessageFactory;
 
 trait Create
 {
@@ -25,6 +23,8 @@ trait Create
         $factory = new Psr17Factory();
         $uri = $this->createUri();
 
+        in_array('sequencia', array_keys($data)) ?: $data['sequencia'] = 1;
+
         $formData = http_build_query([
             static::entityRootKey() => json_encode([
                 static::entityCollectionKey() => [
@@ -42,7 +42,7 @@ trait Create
 
         if ($body['retorno']['status'] === 'OK') {
             $registros = array_map(fn($row) => $row['registro'], $body['retorno']['registros']);
-            $record = array_filter($registros, fn($row) => $row['sequencia'] === $data['sequencia']);
+            $record = array_filter($registros, fn($row) => intval($row['sequencia']) === intval($data['sequencia']));
 
             if (count($record)) {
                 $this->values = array_merge($data, $record[0]);

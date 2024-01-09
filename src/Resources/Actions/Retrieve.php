@@ -11,7 +11,7 @@ trait Retrieve
      */
     protected function retrieveUri(): string
     {
-        return sprintf('%s.obter.php', static::resourceNamePlural());
+        return sprintf('%s.obter.php', static::resourceName());
     }
 
     /**
@@ -24,8 +24,11 @@ trait Retrieve
         $params = ['id' => $id];
         $uri = $this->retrieveUri();
         $query = http_build_query($params);
+
         $request = $this->requestFactory->createRequest('GET', sprintf('/%s?%s', $uri, $query));
-        $content = json_decode($this->client->sendRequest($request)->getBody()->getContents(), true);
+        $response = $this->client->sendRequest($request);
+
+        $content = json_decode($response->getBody()->getContents(), true);
 
         $this->values = $content['retorno'][static::entityRootKey()];
 
