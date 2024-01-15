@@ -34,4 +34,70 @@ class ContaPagarTest extends TestCase
             "situacao" => "parcial"
         ], $contas[0]->toArray());
     }
+
+    /**
+     * @throws Exception
+     * @throws ClientExceptionInterface
+     */
+    public function testCreate()
+    {
+        list($client, $httpClient) = $this->tinyClientSut();
+
+        $this->setDefaultMockResponse($httpClient, 'api2/conta.pagar.incluir.json');
+
+        $payload = [
+            "cliente" => ["codigo" => 123],
+            "vencimento" => "25/11/2015",
+            "valor" => 54.44,
+            "nro_documento" => "",
+            "historico" => "teste teste xxx lalala \n\n\n\t\t\t\t\nxaalkxalxal",
+            "categoria" => "Faxina",
+            "ocorrencia" => "P",
+            "dia_vencimento" => "4",
+            "numero_parcelas" => "4"
+        ];
+
+        $conta = $client->contaPagar->create($payload);
+
+        $request = $httpClient->getLastRequest();
+        parse_str(urldecode($request->getBody()->getContents()), $formData);
+
+        $this->assertArrayHasKey('conta', $formData);
+        $this->assertEquals('POST', $request->getMethod());
+        $this->assertStringEndsWith('api2/conta.pagar.incluir.php', $request->getUri()->getPath());
+        $this->assertInstanceOf(ContaPagar::class, $conta);
+        $this->assertArrayContains($payload, $conta->toArray());
+    }
+
+    /**
+     * @throws Exception
+     * @throws ClientExceptionInterface
+     */
+    public function testBaixar()
+    {
+        list($client, $httpClient) = $this->tinyClientSut();
+
+        $payload = [
+            "id" => "350187089",
+            "contaDestino" => "Bradesco",
+            "data" => "10/10/2016",
+            "categoria" => "Água, Luz",
+            "historico" => "historico de teste",
+            "valorTaxas" => 4.3,
+            "valorJuros" => 3.5,
+            "valorDesconto" => 6.4,
+            "valorAcrescimo" => 3.3,
+            "valorPago" => 35.5
+        ];
+
+        $baixado = $client->contaPagar->baixar($payload);
+
+        $request = $httpClient->getLastRequest();
+        parse_str(urldecode($request->getBody()->getContents()), $formData);
+
+        $this->assertArrayHasKey('conta', $formData);
+        $this->assertEquals('POST', $request->getMethod());
+        $this->assertStringEndsWith('api2/conta.pagar.baixar.php', $request->getUri()->getPath());
+        $this->assertTrue($baixado);
+    }
 }

@@ -3,8 +3,10 @@
 namespace Prettus\TinyERP\Resources;
 
 use Illuminate\Contracts\Support\Arrayable;
+use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
+use Psr\Http\Message\ResponseInterface;
 
 abstract class ApiResource implements Arrayable
 {
@@ -68,5 +70,26 @@ abstract class ApiResource implements Arrayable
     public static function entityCollectionKey(): ?string
     {
         return static::ENTITY_COLLECTION_KEY;
+    }
+
+    /**
+     * @throws ClientExceptionInterface
+     */
+    protected function get(string $uri): ResponseInterface
+    {
+        $request = $this->requestFactory->createRequest( 'GET', $uri);
+        return $this->client->sendRequest($request);
+    }
+
+    /**
+     * @throws ClientExceptionInterface
+     */
+    protected function post(string $uri, array|string $data = null): ResponseInterface
+    {
+        $request = $this->requestFactory->createRequest( 'POST', $uri)
+            ->withHeader('Content-Type', 'application/x-www-form-urlencoded')
+            ->withBody($this->requestFactory->createStream($data));
+
+        return $this->client->sendRequest($request);
     }
 }

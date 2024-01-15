@@ -1,0 +1,32 @@
+{
+  "conta": {
+    "cliente": {
+      "codigo": "1235",
+      "nome": "Contato Teste 2",
+      "tipo_pessoa": "F",
+      "cpf_cnpj": "22755777850",
+      "ie": "",
+      "rg": "1234567890",
+      "endereco": "Rua Teste",
+      "numero": "123",
+      "complemento": "sala 2",
+      "bairro": "Teste",
+      "cep": "95700-000",
+      "cidade": "Bento Gonçalves",
+      "uf": "RS",
+      "fone": "(54) 3055 3808",
+      "email": "teste@teste.com.br",
+      "atualizar_cliente": "N"
+    },
+    "vencimento": "25/11/2015",
+    "valor": 54.44,
+    "nro_documento": "",
+    "historico": "teste teste xxx lalala \n\n\n\t\t\t\t\nxaalkxalxal",
+    "categoria": "Faxina",
+    "forma_pagamento": "boleto",
+    "portador": "Bradesco",
+    "ocorrencia": "P",
+    "dia_vencimento": "4",
+    "numero_parcelas": "4"
+  }
+}

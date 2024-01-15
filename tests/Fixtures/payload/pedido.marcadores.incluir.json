@@ -1,0 +1,16 @@
+{
+  "marcadores": [
+    {
+      "marcador": {
+        "id": "111222333",
+        "descricao": ""
+      }
+    },
+    {
+      "marcador": {
+        "id": "",
+        "descricao": "Teste"
+      }
+    }
+  ]
+}

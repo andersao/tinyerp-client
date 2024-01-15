@@ -1,0 +1,14 @@
+{
+  "conta": {
+    "id": "350187089",
+    "contaOrigem": "Bradesco",
+    "data": "10/10/2016",
+    "categoria": "Água, Luz",
+    "historico": "historico de teste",
+    "valorTaxas": 4.3,
+    "valorJuros": 3.5,
+    "valorDesconto": 6.4,
+    "valorAcrescimo": 3.3,
+    "valorPago": 35.5
+  }
+}

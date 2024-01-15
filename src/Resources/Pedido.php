@@ -30,4 +30,16 @@ class Pedido extends ApiResource
     use Actions\Retrieve;
     use Actions\Update;
     use Actions\Create;
+
+    public function lancarContas(int|string $id): bool {
+        $uri = sprintf('/%s.lancar.contas.php', static::resourceName());
+        $response = $this->post($uri);
+        return $response->getStatusCode() >= 200 && $response->getStatusCode() < 300;
+    }
+
+    public function lancarEstoque(int|string $id): bool {
+        $uri = sprintf('/%s.lancar.estoque.php', static::resourceName());
+        $response = $this->post($uri);
+        return $response->getStatusCode() >= 200 && $response->getStatusCode() < 300;
+    }
 }

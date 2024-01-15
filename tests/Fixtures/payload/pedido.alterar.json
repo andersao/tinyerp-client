@@ -1,0 +1,25 @@
+{
+  "dados_pedido": {
+    "parcelas": [
+      {
+        "data": "20/01/2022",
+        "valor": 5177.72,
+        "obs": "",
+        "destino": "Caixa",
+        "forma_pagamento": "dinheiro"
+      },
+      {
+        "data": "20/02/2022",
+        "valor": 5200,
+        "obs": "",
+        "destino": "Caixa",
+        "forma_pagamento": "boleto",
+        "meio_pagamento": "Banco Inter"
+      }
+    ],
+    "data_prevista": "15/05/2022",
+    "data_envio": "05/02/2022 08:00:00",
+    "obs": "teste api",
+    "obs_interna": "observacao interna teste api"
+  }
+}

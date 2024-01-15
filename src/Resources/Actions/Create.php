@@ -7,6 +7,11 @@ use Psr\Http\Client\ClientExceptionInterface;
 
 trait Create
 {
+    public function createBatch(): bool
+    {
+        return false;
+    }
+
     /**
      * @return string
      */
@@ -25,13 +30,17 @@ trait Create
 
         in_array('sequencia', array_keys($data)) ?: $data['sequencia'] = 1;
 
-        $formData = http_build_query([
+        $supportsBatch = $this->createBatch();
+
+        $payload = $supportsBatch ? [
             static::entityRootKey() => json_encode([
                 static::entityCollectionKey() => [
                     [static::entityRootKey() => $data]
                 ]
             ])
-        ]);
+        ] : [static::entityRootKey() => [static::entityRootKey() => $data]];
+
+        $formData = http_build_query($payload);
 
         $request = $this->requestFactory->createRequest('POST', $uri)
             ->withHeader('Content-Type', 'application/x-www-form-urlencoded')

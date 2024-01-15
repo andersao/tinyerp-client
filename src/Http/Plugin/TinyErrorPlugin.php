@@ -41,6 +41,8 @@ class TinyErrorPlugin implements Plugin
         $contents = $response->getBody()->getContents();
         $json = json_decode($contents, true);
 
+        var_dump($json);
+
         $retorno = $json['retorno'];
         $status = $retorno['status'] ?? null;
         $codigoErro = $retorno['codigo_erro'] ?? null;

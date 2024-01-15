@@ -29,6 +29,11 @@ class Contato extends ApiResource
     const ENTITY_ROOT_KEY = 'contato';
     const ENTITY_COLLECTION_KEY = 'contatos';
 
+    public function createBatch(): bool
+    {
+        return true;
+    }
+
     use Actions\Search;
     use Actions\Retrieve;
     use Actions\Create;

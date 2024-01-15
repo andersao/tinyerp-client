@@ -37,4 +37,18 @@ class PedidoTest extends TestCase
             "situacao" => "Atendido"
         ], $pedidos[0]->toArray());
     }
+
+    public function testLancarContas()
+    {
+        list($client, $httpClient) = $this->tinyClientSut();
+        $client->pedido->lancarContas(1);
+        $this->assertLastRequest($httpClient, 'POST', 'api2/pedido.lancar.contas.php');
+    }
+
+    public function testLancarEstoque()
+    {
+        list($client, $httpClient) = $this->tinyClientSut();
+        $client->pedido->lancarEstoque(1);
+        $this->assertLastRequest($httpClient, 'POST', 'api2/pedido.lancar.estoque.php');
+    }
 }
