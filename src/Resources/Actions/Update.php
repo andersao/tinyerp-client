@@ -41,7 +41,7 @@ trait Update
         $body = json_decode($response->getBody()->getContents(), true);
 
         if ($body['retorno']['status'] === 'OK') {
-            $registros = array_map(fn($row) => $row['registro'], $body['retorno']['registros']);
+            $registros = array_map(fn($row) => $row['registro'], $body['retorno']['registros'] ?? []);
             $record = array_filter($registros, fn($row) => intval($row['sequencia']) === intval($data['sequencia']));
 
             if (count($record)) {
