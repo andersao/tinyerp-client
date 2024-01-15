@@ -152,6 +152,17 @@ class ContatoTest extends TestCase
         parse_str(urldecode($request->getBody()->getContents()), $formData);
 
         $this->assertArrayHasKey('contato', $formData);
+
+        $json = json_decode($formData['contato'], true);
+
+        $this->assertArrayHasKey('contatos', $json);
+        $this->assertCount(1, $json['contatos']);
+        $this->assertArrayHasKey('contato', $json['contatos'][0]);
+
+        $contatoBody = $json['contatos'][0]['contato'];
+
+        $this->assertArrayContains($payload, $contatoBody);
+
         $this->assertEquals('POST', $request->getMethod());
         $this->assertStringEndsWith('api2/contato.incluir.php', $request->getUri()->getPath());
         $this->assertInstanceOf(Contato::class, $contato);
@@ -191,6 +202,13 @@ class ContatoTest extends TestCase
         parse_str(urldecode($request->getBody()->getContents()), $formData);
 
         $this->assertArrayHasKey('contato', $formData);
+
+        $json = json_decode($formData['contato'], true);
+
+        $this->assertArrayHasKey('contatos', $json);
+        $this->assertCount(1, $json['contatos']);
+        $this->assertArrayHasKey('contato', $json['contatos'][0]);
+
         $this->assertEquals('POST', $request->getMethod());
         $this->assertStringEndsWith('api2/contato.alterar.php', $request->getUri()->getPath());
         $this->assertInstanceOf(Contato::class, $contato);

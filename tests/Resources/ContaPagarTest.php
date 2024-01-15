@@ -63,14 +63,13 @@ class ContaPagarTest extends TestCase
         parse_str(urldecode($request->getBody()->getContents()), $formData);
 
         $this->assertArrayHasKey('conta', $formData);
+        $this->assertArrayHasKey('conta', $formData['conta']);
+        $this->assertArrayHasKey('cliente', $formData['conta']['conta']);
         $this->assertEquals('POST', $request->getMethod());
         $this->assertStringEndsWith('api2/conta.pagar.incluir.php', $request->getUri()->getPath());
         $this->assertInstanceOf(ContaPagar::class, $conta);
-
-        $this->assertArrayContains([
-            "vencimento" => "25/11/2015",
-            "valor" => 54.44
-        ], $conta->toArray());
+        $this->assertNotNull($conta->id);
+        $this->assertArrayContains($payload, $conta->toArray());
     }
 
     /**
@@ -100,6 +99,11 @@ class ContaPagarTest extends TestCase
         parse_str(urldecode($request->getBody()->getContents()), $formData);
 
         $this->assertArrayHasKey('conta', $formData);
+
+        $json = json_decode($formData['conta'], true);
+
+        $this->assertArrayHasKey('conta', $json);
+        $this->assertArrayHasKey('id', $json['conta']);
         $this->assertEquals('POST', $request->getMethod());
         $this->assertStringEndsWith('api2/conta.pagar.baixar.php', $request->getUri()->getPath());
         $this->assertTrue($baixado);
