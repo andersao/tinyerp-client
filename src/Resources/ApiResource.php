@@ -84,11 +84,16 @@ abstract class ApiResource implements Arrayable
     /**
      * @throws ClientExceptionInterface
      */
-    protected function post(string $uri, array|string $data = null): ResponseInterface
+    protected function post(string $uri, array|string|null $data = null): ResponseInterface
     {
         $request = $this->requestFactory->createRequest( 'POST', $uri)
-            ->withHeader('Content-Type', 'application/x-www-form-urlencoded')
-            ->withBody($this->requestFactory->createStream($data));
+            ->withHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+        if (!is_null($data)) {
+            $request = $request->withBody(
+                $this->requestFactory->createStream($data)
+            );
+        }
 
         return $this->client->sendRequest($request);
     }

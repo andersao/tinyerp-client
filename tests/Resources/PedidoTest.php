@@ -38,16 +38,24 @@ class PedidoTest extends TestCase
         ], $pedidos[0]->toArray());
     }
 
+    /**
+     * @throws Exception
+     */
     public function testLancarContas()
     {
         list($client, $httpClient) = $this->tinyClientSut();
+        $this->setDefaultMockResponse($httpClient, 'api2/general.ok.json');
         $client->pedido->lancarContas(1);
         $this->assertLastRequest($httpClient, 'POST', 'api2/pedido.lancar.contas.php');
     }
 
+    /**
+     * @throws Exception
+     */
     public function testLancarEstoque()
     {
         list($client, $httpClient) = $this->tinyClientSut();
+        $this->setDefaultMockResponse($httpClient, 'api2/general.ok.json');
         $client->pedido->lancarEstoque(1);
         $this->assertLastRequest($httpClient, 'POST', 'api2/pedido.lancar.estoque.php');
     }

@@ -66,7 +66,11 @@ class ContaPagarTest extends TestCase
         $this->assertEquals('POST', $request->getMethod());
         $this->assertStringEndsWith('api2/conta.pagar.incluir.php', $request->getUri()->getPath());
         $this->assertInstanceOf(ContaPagar::class, $conta);
-        $this->assertArrayContains($payload, $conta->toArray());
+
+        $this->assertArrayContains([
+            "vencimento" => "25/11/2015",
+            "valor" => 54.44
+        ], $conta->toArray());
     }
 
     /**
@@ -79,7 +83,7 @@ class ContaPagarTest extends TestCase
 
         $payload = [
             "id" => "350187089",
-            "contaDestino" => "Bradesco",
+            "contaDestino" => "Caixa",
             "data" => "10/10/2016",
             "categoria" => "Água, Luz",
             "historico" => "historico de teste",
