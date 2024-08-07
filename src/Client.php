@@ -50,28 +50,30 @@ class Client
     public function get(string $uri, array $query = []): ResponseInterface
     {
         $message = Psr17FactoryDiscovery::findRequestFactory();
+        $uri = $uri . '?' . http_build_query($query);
         return $this->httpClient->sendRequest($message->createRequest('GET', $uri));
     }
 
     /**
      * @throws ClientExceptionInterface
      */
-    public function post(string $uri, array $data = []): ResponseInterface
+    public function post(string $uri, array $data = [], array $query = []): ResponseInterface
     {
         // create a post request as form data
         $message = Psr17FactoryDiscovery::findRequestFactory();
-        $request = $message->createRequest('POST', $uri)
-            ->withBody($message->createStream($data));
+        $uri = $uri . '?' . http_build_query($query);
+        $request = $message->createRequest('POST', $uri)->withBody($message->createStream($data));
         return $this->httpClient->sendRequest($request);
     }
 
     /**
      * @throws ClientExceptionInterface
      */
-    public function postForm(string $uri, array $data = []): ResponseInterface
+    public function postForm(string $uri, array $data = [], array $query = []): ResponseInterface
     {
         $stream = Psr17FactoryDiscovery::findStreamFactory()->createStream(http_build_query($data));
         $message = Psr17FactoryDiscovery::findRequestFactory();
+        $uri = $uri . '?' . http_build_query($query);
         $request = $message->createRequest('POST', $uri)
             ->withHeader('Content-Type', 'application/x-www-form-urlencoded')
             ->withBody($stream);
