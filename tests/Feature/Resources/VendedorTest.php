@@ -21,7 +21,7 @@ describe('Vendedor resource', function () {
         $entity = $entities[0];
 
         expect($entity)->toBeInstanceOf(VendedorEntity::class)
-            ->and($entity->id)->toBe('46829055')
+            ->and($entity->id)->toBe(46829055)
             ->and($entity->nome)->toBe('Vendedor Teste');
     });
 });

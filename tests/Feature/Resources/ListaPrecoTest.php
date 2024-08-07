@@ -23,6 +23,6 @@ describe('Lista preco resource', function () {
         expect($entity)->toBeInstanceOf(ListaPrecoEntity::class)
             ->and($entity->id)->toBe(117991558)
             ->and($entity->descricao)->toBe('Amigos')
-            ->and($entity->acrescimo_desconto)->toBe(-5);
+            ->and($entity->acrescimo_desconto)->toBe(-5.0);
     });
 });

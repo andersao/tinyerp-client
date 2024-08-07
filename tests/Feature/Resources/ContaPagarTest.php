@@ -22,14 +22,14 @@ describe('Contas pagar resource', function () {
         $entity = $entities[0];
 
         expect($entity)->toBeInstanceOf(ContaPagarEntity::class)
-            ->and($entity->id)->toBe('5489125')
+            ->and($entity->id)->toBe(5489125)
             ->and($entity->cliente->nome)->toBe('henrique teste 2')
             ->and($entity->historico)->toBe('Ref. a NF nº 000453, henrique teste 2 (parcela 1/1)')
             ->and($entity->nro_documento)->toBe('000453/01')
             ->and($entity->vencimento)->toBe('08/07/2015')
             ->and($entity->emissao)->toBe('10/07/2015')
-            ->and($entity->valor)->toBe('6.00')
-            ->and($entity->saldo)->toBe('1.00')
+            ->and($entity->valor)->toBe(6.00)
+            ->and($entity->saldo)->toBe(1.00)
             ->and($entity->situacao)->toBe('parcial');
     });
 
@@ -43,10 +43,10 @@ describe('Contas pagar resource', function () {
             ->and($response->status)->toBe('OK')
             ->and($response->status_processamento)->toBe(3)
             ->and($entity)->toBeInstanceOf(ContaPagarEntity::class)
-            ->and($entity->id)->toBe('433224432')
+            ->and($entity->id)->toBe(433224432)
             ->and($entity->emissao)->toBe('25/11/2015')
             ->and($entity->vencimento)->toBe('28/10/2016')
-            ->and($entity->valor)->toBe('6565.00')
+            ->and($entity->valor)->toBe(6565.00)
             ->and($entity->nro_documento)->toBe('000065205')
             ->and($entity->competencia)->toBe('10/2016')
             ->and($entity->historico)->toBe('historico - mensal - henrique teste 4100')

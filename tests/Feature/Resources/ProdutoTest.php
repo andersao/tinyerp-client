@@ -1,8 +1,10 @@
 <?php
 
-use Prettus\TinyERP\Entities\ContaPagarEntity;
+use Prettus\TinyERP\Entities\Deposito;
 use Prettus\TinyERP\Entities\ProdutoEntity;
 use Prettus\TinyERP\Entities\ProdutoEstoqueEntity;
+use Prettus\TinyERP\Entities\ProdutoImagem;
+use Prettus\TinyERP\Entities\ProdutoVariacaoEntity;
 use Prettus\TinyERP\Responses\RegistroResponse;
 use Prettus\TinyERP\Responses\RetornoResponse;
 
@@ -24,13 +26,13 @@ describe('Produto resource', function () {
         $entity = $entities[0];
 
         expect($entity)->toBeInstanceOf(ProdutoEntity::class)
-            ->and($entity->id)->toBe('46829062')
+            ->and($entity->id)->toBe(46829062)
             ->and($entity->codigo)->toBe('123')
             ->and($entity->nome)->toBe('produto teste')
-            ->and($entity->preco)->toBe('1.20')
-            ->and($entity->preco_promocional)->toBe('1.10')
-            ->and($entity->preco_custo)->toBe('1.05')
-            ->and($entity->preco_custo_medio)->toBe('1.02')
+            ->and($entity->preco)->toBe(1.20)
+            ->and($entity->preco_promocional)->toBe(1.10)
+            ->and($entity->preco_custo)->toBe(1.05)
+            ->and($entity->preco_custo_medio)->toBe(1.02)
             ->and($entity->unidade)->toBe('UN')
             ->and($entity->tipo_variacao)->toBe('P');
     });
@@ -45,45 +47,45 @@ describe('Produto resource', function () {
             ->and($response->status)->toBe('OK')
             ->and($response->status_processamento)->toBe(3)
             ->and($entity)->toBeInstanceOf(ProdutoEntity::class)
-            ->and($entity->id)->toBe('349112581')
+            ->and($entity->id)->toBe(349112581)
             ->and($entity->codigo)->toBe('123')
             ->and($entity->nome)->toBe('produto teste')
             ->and($entity->unidade)->toBe('UN')
-            ->and($entity->preco)->toBe('0')
-            ->and($entity->preco_promocional)->toBe('0')
+            ->and($entity->preco)->toBe(0.0)
+            ->and($entity->preco_promocional)->toBe(0.0)
             ->and($entity->ncm)->toBe('')
-            ->and($entity->origem)->toBe('0')
+            ->and($entity->origem)->toBe(0)
             ->and($entity->gtin)->toBe('')
             ->and($entity->gtin_embalagem)->toBe('')
             ->and($entity->localizacao)->toBe('')
-            ->and($entity->peso_liquido)->toBe('0')
-            ->and($entity->peso_bruto)->toBe('0')
-            ->and($entity->estoque_minimo)->toBe('0')
-            ->and($entity->estoque_maximo)->toBe('0')
-            ->and($entity->id_fornecedor)->toBe('0')
+            ->and($entity->peso_liquido)->toBe(0.0)
+            ->and($entity->peso_bruto)->toBe(0.0)
+            ->and($entity->estoque_minimo)->toBe(0.0)
+            ->and($entity->estoque_maximo)->toBe(0.0)
+            ->and($entity->id_fornecedor)->toBe(0)
             ->and($entity->codigo_fornecedor)->toBe('')
             ->and($entity->codigo_pelo_fornecedor)->toBe('')
             ->and($entity->unidade_por_caixa)->toBe('')
-            ->and($entity->preco_custo)->toBe('0')
-            ->and($entity->preco_custo_medio)->toBe('0')
+            ->and($entity->preco_custo)->toBe(0.0)
+            ->and($entity->preco_custo_medio)->toBe(0.0)
             ->and($entity->situacao)->toBe('A')
             ->and($entity->tipo)->toBe('P')
             ->and($entity->classe_ipi)->toBe('')
-            ->and($entity->valor_ipi_fixo)->toBe('0')
+            ->and($entity->valor_ipi_fixo)->toBe(0.0)
             ->and($entity->cod_lista_servicos)->toBe('')
             ->and($entity->descricao_complementar)->toBe('')
             ->and($entity->obs)->toBe('')
             ->and($entity->garantia)->toBe('')
             ->and($entity->cest)->toBe('01.003.00')
             ->and($entity->tipo_variacao)->toBe('P')
-            ->and($entity->id_produto_pai)->toBe('')
+            ->and($entity->id_produto_pai)->toBeNull()
             ->and($entity->sob_encomenda)->toBe('S')
             ->and($entity->marca)->toBe('Marca do produto')
-            ->and($entity->tipo_embalagem)->toBe('2')
-            ->and($entity->altura_embalagem)->toBe('26.50')
-            ->and($entity->comprimento_embalagem)->toBe('27.42')
-            ->and($entity->largura_embalagem)->toBe('28.00')
-            ->and($entity->diametro_embalagem)->toBe('0.00')
+            ->and($entity->tipo_embalagem)->toBe(2)
+            ->and($entity->altura_embalagem)->toBe(26.50)
+            ->and($entity->comprimento_embalagem)->toBe(27.42)
+            ->and($entity->largura_embalagem)->toBe(28.00)
+            ->and($entity->diametro_embalagem)->toBe(0.00)
             ->and($entity->categoria)->toBe('Categoria pai >> Categoria filha')
             ->and($entity->classe_produto)->toBe('V')
             ->and($entity->variacoes)->toBeArray()
@@ -94,13 +96,13 @@ describe('Produto resource', function () {
         $variacao = $entity->variacoes[0];
         $imagem = $entity->imagens[0];
 
-        expect($variacao)->toBeInstanceOf(\Prettus\TinyERP\Entities\ProdutoVariacao::class)
-            ->and($variacao->id)->toBe('323221231')
+        expect($variacao)->toBeInstanceOf(ProdutoVariacaoEntity::class)
+            ->and($variacao->id)->toBe(323221231)
             ->and($variacao->codigo)->toBe('123 - 1')
-            ->and($variacao->preco)->toBe('36.3200000000')
+            ->and($variacao->preco)->toBe(36.32)
             ->and($variacao->grade)->toBeArray()
             ->and($variacao->grade)->toHaveKeys(['Cor', 'Tamanho'])
-            ->and($imagem)->toBeInstanceOf(\Prettus\TinyERP\Entities\ProdutoImagem::class)
+            ->and($imagem)->toBeInstanceOf(ProdutoImagem::class)
             ->and($imagem->url)->toBe('http://minhalojavirtualtiny.com.br/images/45221.jpg')
             ->and($imagem->externa)->toBeFalse();
     });
@@ -190,7 +192,7 @@ describe('Produto resource', function () {
 
         $deposito = $entity->depositos[0];
 
-        expect($deposito)->toBeInstanceOf(\Prettus\TinyERP\Entities\Deposito::class)
+        expect($deposito)->toBeInstanceOf(Deposito::class)
             ->and($deposito->nome)->toBe('Deposito 1')
             ->and($deposito->saldo)->toBe(5.0)
             ->and($deposito->desconsiderar)->toBe('N')
@@ -216,7 +218,7 @@ describe('Produto resource', function () {
 
         expect($produtos)->toBeArray()
             ->and($produtos)->toHaveCount(2)
-            ->and($produto->id)->toBe('46829062')
+            ->and($produto->id)->toBe(46829062)
             ->and($produto->nome)->toBe('produto teste');
     });
 });

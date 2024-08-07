@@ -23,14 +23,14 @@ describe('Pedido resource', function () {
         $entity = $entities[0];
 
         expect($entity)->toBeInstanceOf(PedidoEntity::class)
-            ->and($entity->id)->toBe('123456')
+            ->and($entity->id)->toBe(123456)
             ->and($entity->numero)->toBe('123456')
             ->and($entity->numero_ecommerce)->toBe('12')
             ->and($entity->nome)->toBe('Cliente Teste')
-            ->and($entity->total_pedido)->toBe('100.25')
+            ->and($entity->total_pedido)->toBe(100.25)
             ->and($entity->data_pedido)->toBe('01/01/2013')
             ->and($entity->data_prevista)->toBe('10/01/2013')
-            ->and($entity->id_vendedor)->toBe('123456')
+            ->and($entity->id_vendedor)->toBe(123456)
             ->and($entity->nome_vendedor)->toBe('Vendedor Teste')
             ->and($entity->situacao)->toBe('Atendido');
     });
@@ -45,7 +45,7 @@ describe('Pedido resource', function () {
             ->and($response->status)->toBe('OK')
             ->and($response->status_processamento)->toBe(3)
             ->and($entity)->toBeInstanceOf(PedidoEntity::class)
-            ->and($entity->id)->toBe('123456')
+            ->and($entity->id)->toBe(123456)
             ->and($entity->numero)->toBe("123")
             ->and($entity->data_pedido)->toBe("01/01/2012")
             ->and($entity->data_prevista)->toBe("10/01/2012")
@@ -55,21 +55,21 @@ describe('Pedido resource', function () {
             ->and($entity->meio_pagamento)->toBe("Dinheiro")
             ->and($entity->nome_transportador)->toBe("transportador teste")
             ->and($entity->frete_por_conta)->toBe("E")
-            ->and($entity->valor_frete)->toBe("35.00")
-            ->and($entity->valor_desconto)->toBe("35.00")
-            ->and($entity->total_produtos)->toBe("161.50")
-            ->and($entity->total_pedido)->toBe("161.50")
+            ->and($entity->valor_frete)->toBe(35.00)
+            ->and($entity->valor_desconto)->toBe(35.00)
+            ->and($entity->total_produtos)->toBe(161.50)
+            ->and($entity->total_pedido)->toBe(161.50)
             ->and($entity->numero_ordem_compra)->toBe("123")
             ->and($entity->deposito)->toBe("Teste")
             ->and($entity->forma_envio)->toBe("C")
             ->and($entity->forma_frete)->toBe("SEDEX - CONTRATO (40436)")
             ->and($entity->situacao)->toBe("Em aberto")
             ->and($entity->obs)->toBe("Observação Teste")
-            ->and($entity->id_vendedor)->toBe("0")
+            ->and($entity->id_vendedor)->toBe(0)
             ->and($entity->nome_vendedor)->toBe("")
             ->and($entity->codigo_rastreamento)->toBe("TINY90831920321BR")
             ->and($entity->url_rastreamento)->toBe("http://urlrastreamento.com.br")
-            ->and($entity->id_nota_fiscal)->toBe("0")
+            ->and($entity->id_nota_fiscal)->toBe(0)
             ->and($entity->cliente)->toBeInstanceOf(\Prettus\TinyERP\Entities\PedidoCliente::class)
             ->and($entity->cliente->codigo)->toBe("1235")
             ->and($entity->cliente->nome)->toBe("Contato Teste 2")
@@ -85,18 +85,18 @@ describe('Pedido resource', function () {
         $parcela = $entity->parcelas[0];
         $item = $entity->itens[0];
 
-        expect($marcador->id)->toBe('149238')
+        expect($marcador->id)->toBe(149238)
             ->and($marcador->descricao)->toBe('Teste')
             ->and($marcador->cor)->toBe('#808080')
             ->and($parcela->dias)->toBe('30')
             ->and($parcela->data)->toBe('29/11/2012')
-            ->and($parcela->valor)->toBe('53.84')
+            ->and($parcela->valor)->toBe(53.84)
             ->and($parcela->obs)->toBe('Obs Parcela 1')
             ->and($item->codigo)->toBe('1234')
             ->and($item->descricao)->toBe('Produto Teste 1')
             ->and($item->unidade)->toBe('UN')
-            ->and($item->quantidade)->toBe('2')
-            ->and($item->valor_unitario)->toBe('50.25');
+            ->and($item->quantidade)->toBe(2.0)
+            ->and($item->valor_unitario)->toBe(50.25);
     });
 
     it('should create', function () {

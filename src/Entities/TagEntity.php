@@ -5,7 +5,7 @@ namespace Prettus\TinyERP\Entities;
 
 class TagEntity extends AbstractEntity
 {
-    public readonly int|null $id;
+    public readonly ?int $id;
     public readonly string $nome;
     public readonly ?string $id_grupo;
     public readonly ?string $grupo;

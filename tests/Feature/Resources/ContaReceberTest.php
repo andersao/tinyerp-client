@@ -22,7 +22,7 @@ describe('Conta Receber resource', function () {
         $entity = $entities[0];
 
         expect($entity)->toBeInstanceOf(ContaReceberEntity::class)
-            ->and($entity->id)->toBe('5489125')
+            ->and($entity->id)->toBe(5489125)
             ->and($entity->cliente->nome)->toBe('henrique teste 2')
             ->and($entity->historico)->toBe('Ref. a NF nº 000453, henrique teste 2 (parcela 1/1)')
             ->and($entity->nro_banco)->toBe('175/00064619-3')
@@ -30,8 +30,8 @@ describe('Conta Receber resource', function () {
             ->and($entity->serie_documento)->toBe('2')
             ->and($entity->vencimento)->toBe('08/07/2015')
             ->and($entity->emissao)->toBe('10/07/2015')
-            ->and($entity->valor)->toBe('6.00')
-            ->and($entity->saldo)->toBe('1.00')
+            ->and($entity->valor)->toBe(6.00)
+            ->and($entity->saldo)->toBe(1.00)
             ->and($entity->situacao)->toBe('parcial');
     });
 
@@ -45,7 +45,7 @@ describe('Conta Receber resource', function () {
             ->and($response->status)->toBe('OK')
             ->and($response->status_processamento)->toBe(3)
             ->and($entity)->toBeInstanceOf(ContaReceberEntity::class)
-            ->and($entity->id)->toBe('433224432')
+            ->and($entity->id)->toBe(433224432)
             ->and($entity->nro_documento)->toBe('000065205')
             ->and($entity->competencia)->toBe('10/2016');
     });

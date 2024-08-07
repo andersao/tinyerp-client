@@ -5,7 +5,7 @@ namespace Prettus\TinyERP\Entities;
 
 class VendedorEntity extends AbstractEntity
 {
-    public readonly ?string $id;
+    public readonly ?int $id;
     public readonly ?string $codigo;
     public readonly ?string $nome;
     public readonly ?string $tipo_pessoa;

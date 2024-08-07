@@ -8,6 +8,6 @@ class PedidoItem
     public readonly ?string $codigo;
     public readonly ?string $descricao;
     public readonly ?string $unidade;
-    public readonly ?string $quantidade;
-    public readonly ?string $valor_unitario;
+    public readonly ?float $quantidade;
+    public readonly ?float $valor_unitario;
 }
