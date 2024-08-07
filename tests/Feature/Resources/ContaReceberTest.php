@@ -23,7 +23,7 @@ describe('Conta Receber resource', function () {
 
         expect($entity)->toBeInstanceOf(ContaReceberEntity::class)
             ->and($entity->id)->toBe('5489125')
-            ->and($entity->nome_cliente)->toBe('henrique teste 2')
+            ->and($entity->cliente->nome)->toBe('henrique teste 2')
             ->and($entity->historico)->toBe('Ref. a NF nº 000453, henrique teste 2 (parcela 1/1)')
             ->and($entity->nro_banco)->toBe('175/00064619-3')
             ->and($entity->nro_documento)->toBe('000453/01')

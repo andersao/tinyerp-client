@@ -6,9 +6,9 @@ namespace Prettus\TinyERP\Entities;
 class ContaReceberEntity extends AbstractEntity
 {
     public readonly ?string $id;
+    public readonly ?ContaCliente $cliente;
     public readonly ?string $emissao;
     public readonly ?string $vencimento;
-    public readonly ?string $nome_cliente;
     public readonly ?string $valor;
     public readonly ?string $saldo;
     public readonly ?string $nro_documento;
@@ -23,14 +23,13 @@ class ContaReceberEntity extends AbstractEntity
     public readonly ?string $dia_vencimento;
     public readonly ?string $forma_pagamento;
 
-    public static function entityKey(): string
-    {
-        return 'tag';
-    }
+    public static function prepareData($data): array {
 
-    public static function entityCollectionKey(): string
-    {
-        return 'tags';
+        if(isset($data['nome_cliente'])) {
+            $data['cliente'] = ['nome' => $data['nome_cliente']];
+        }
+
+        return $data;
     }
 
     public static function sourceMapping(): array

@@ -23,7 +23,7 @@ describe('Contas pagar resource', function () {
 
         expect($entity)->toBeInstanceOf(ContaPagarEntity::class)
             ->and($entity->id)->toBe('5489125')
-            ->and($entity->nome_cliente)->toBe('henrique teste 2')
+            ->and($entity->cliente->nome)->toBe('henrique teste 2')
             ->and($entity->historico)->toBe('Ref. a NF nº 000453, henrique teste 2 (parcela 1/1)')
             ->and($entity->nro_documento)->toBe('000453/01')
             ->and($entity->vencimento)->toBe('08/07/2015')
@@ -54,6 +54,9 @@ describe('Contas pagar resource', function () {
             ->and($entity->situacao)->toBe('aberto')
             ->and($entity->ocorrencia)->toBe('M')
             ->and($entity->dia_vencimento)->toBe('28')
+            ->and($entity->cliente->nome)->toBe('Henrique Teste 4100')
+            ->and($entity->cliente->cpf_cnpj)->toBe('54.544.826/0001-40')
+            ->and($entity->cliente->tipo_pessoa)->toBe('J')
             ->and($entity->toArray())->toBeArray();
     });
 

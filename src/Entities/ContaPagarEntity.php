@@ -5,7 +5,7 @@ namespace Prettus\TinyERP\Entities;
 class ContaPagarEntity extends AbstractEntity
 {
     public readonly ?string $id;
-    public readonly ?string $nome_cliente;
+    public readonly ?ContaCliente $cliente;
     public readonly ?string $data;
     public readonly ?string $vencimento;
     public readonly ?string $emissao;
@@ -19,14 +19,13 @@ class ContaPagarEntity extends AbstractEntity
     public readonly ?string $ocorrencia;
     public readonly ?string $dia_vencimento;
 
-    public static function entityKey(): string
-    {
-        return 'tag';
-    }
+    public static function prepareData($data): array {
 
-    public static function entityCollectionKey(): string
-    {
-        return 'tags';
+        if(isset($data['nome_cliente'])) {
+            $data['cliente'] = ['nome' => $data['nome_cliente']];
+        }
+
+        return $data;
     }
 
     public static function sourceMapping(): array
