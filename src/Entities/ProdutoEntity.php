@@ -52,7 +52,7 @@ class ProdutoEntity extends AbstractEntity
     public readonly ?array $variacoes;
 
     /**
-     * @var ProdutoImagem[]|null $imagens
+     * @var ProdutoImagemEntity[]|null $imagens
      */
     public readonly ?array $imagens;
 

@@ -3,7 +3,7 @@
 namespace Prettus\TinyERP\Entities;
 
 
-class PedidoMarcador
+class PedidoMarcadorEntity extends AbstractEntity
 {
     public readonly ?int $id;
     public readonly ?string $descricao;

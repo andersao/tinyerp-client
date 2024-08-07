@@ -3,7 +3,7 @@
 namespace Prettus\TinyERP\Entities;
 
 
-class ContaCliente extends AbstractEntity
+class ContaClienteEntity extends AbstractEntity
 {
     public readonly ?string $codigo;
     public readonly ?string $nome;

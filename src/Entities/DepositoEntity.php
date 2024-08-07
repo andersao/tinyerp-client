@@ -2,12 +2,8 @@
 
 namespace Prettus\TinyERP\Entities;
 
-use Prettus\TinyERP\Traits\HasMapperBuilder;
-
-class Deposito
+class DepositoEntity extends AbstractEntity
 {
-    use HasMapperBuilder;
-
     public readonly ?string $nome;
     public readonly ?string $desconsiderar;
     public readonly ?float $saldo;

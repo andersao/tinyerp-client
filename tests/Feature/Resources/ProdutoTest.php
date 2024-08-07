@@ -1,9 +1,9 @@
 <?php
 
-use Prettus\TinyERP\Entities\Deposito;
+use Prettus\TinyERP\Entities\DepositoEntity;
 use Prettus\TinyERP\Entities\ProdutoEntity;
 use Prettus\TinyERP\Entities\ProdutoEstoqueEntity;
-use Prettus\TinyERP\Entities\ProdutoImagem;
+use Prettus\TinyERP\Entities\ProdutoImagemEntity;
 use Prettus\TinyERP\Entities\ProdutoVariacaoEntity;
 use Prettus\TinyERP\Responses\RegistroResponse;
 use Prettus\TinyERP\Responses\RetornoResponse;
@@ -102,7 +102,7 @@ describe('Produto resource', function () {
             ->and($variacao->preco)->toBe(36.32)
             ->and($variacao->grade)->toBeArray()
             ->and($variacao->grade)->toHaveKeys(['Cor', 'Tamanho'])
-            ->and($imagem)->toBeInstanceOf(ProdutoImagem::class)
+            ->and($imagem)->toBeInstanceOf(ProdutoImagemEntity::class)
             ->and($imagem->url)->toBe('http://minhalojavirtualtiny.com.br/images/45221.jpg')
             ->and($imagem->externa)->toBeFalse();
     });
@@ -192,7 +192,7 @@ describe('Produto resource', function () {
 
         $deposito = $entity->depositos[0];
 
-        expect($deposito)->toBeInstanceOf(Deposito::class)
+        expect($deposito)->toBeInstanceOf(DepositoEntity::class)
             ->and($deposito->nome)->toBe('Deposito 1')
             ->and($deposito->saldo)->toBe(5.0)
             ->and($deposito->desconsiderar)->toBe('N')

@@ -3,7 +3,7 @@
 namespace Prettus\TinyERP\Entities;
 
 
-class PedidoParcela
+class PedidoParcelaEntity extends AbstractEntity
 {
     public readonly ?string $dias;
     public readonly ?string $data;

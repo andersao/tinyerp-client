@@ -70,7 +70,7 @@ describe('Pedido resource', function () {
             ->and($entity->codigo_rastreamento)->toBe("TINY90831920321BR")
             ->and($entity->url_rastreamento)->toBe("http://urlrastreamento.com.br")
             ->and($entity->id_nota_fiscal)->toBe(0)
-            ->and($entity->cliente)->toBeInstanceOf(\Prettus\TinyERP\Entities\PedidoCliente::class)
+            ->and($entity->cliente)->toBeInstanceOf(\Prettus\TinyERP\Entities\PedidoClienteEntity::class)
             ->and($entity->cliente->codigo)->toBe("1235")
             ->and($entity->cliente->nome)->toBe("Contato Teste 2")
             ->and($entity->marcadores)->toBeArray()

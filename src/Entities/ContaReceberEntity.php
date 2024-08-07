@@ -6,7 +6,7 @@ namespace Prettus\TinyERP\Entities;
 class ContaReceberEntity extends AbstractEntity
 {
     public readonly ?int $id;
-    public readonly ?ContaCliente $cliente;
+    public readonly ?ContaClienteEntity $cliente;
     public readonly ?string $emissao;
     public readonly ?string $vencimento;
     public readonly ?float $valor;

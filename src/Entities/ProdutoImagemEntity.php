@@ -2,7 +2,7 @@
 
 namespace Prettus\TinyERP\Entities;
 
-class ProdutoImagem {
+class ProdutoImagemEntity extends AbstractEntity {
     public readonly ?string $url;
     public readonly ?bool $externa;
 }

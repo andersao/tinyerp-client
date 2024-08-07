@@ -4,7 +4,7 @@ namespace Prettus\TinyERP\Entities;
 
 use Prettus\TinyERP\Traits\HasMapperBuilder;
 
-class ProdutoEstoqueEntity
+class ProdutoEstoqueEntity extends AbstractEntity
 {
     public readonly ?int $id;
     public readonly ?string $codigo;
@@ -12,13 +12,10 @@ class ProdutoEstoqueEntity
     public readonly ?string $unidade;
     public readonly ?float $saldo;
     public readonly ?float $saldoReservado;
-
     /**
-     * @var Deposito[]
+     * @var DepositoEntity[]
      */
     public readonly ?array $depositos;
-
-    use HasMapperBuilder;
 
     public static function prepareData($data): array {
 
