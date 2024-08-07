@@ -43,7 +43,7 @@ class TinyErrorPlugin implements Plugin
                 $status = strtolower($retorno['status'] ?? '');
 
                 if($status == 'erro') {
-                    $codigo = $retorno['codigo_erro'] ?? 0;
+                    $codigo = intval($retorno['codigo_erro'] ?? 0);
                     $erros = $retorno['erros'] ?? [];
                     $messsage = $this->extractFirstError($erros);
 
