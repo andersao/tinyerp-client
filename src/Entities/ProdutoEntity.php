@@ -34,15 +34,15 @@ class ProdutoEntity extends AbstractEntity
     public readonly ?string $obs;
     public readonly ?string $garantia;
     public readonly ?string $cest;
-    public readonly ?string $tipoVariacao;
-    public readonly ?string $idProdutoPai;
+    public readonly ?string $tipo_variacao;
+    public readonly ?string $id_produto_pai;
     public readonly ?string $sob_encomenda;
     public readonly ?string $marca;
-    public readonly ?string $tipoEmbalagem;
-    public readonly ?string $alturaEmbalagem;
-    public readonly ?string $comprimentoEmbalagem;
-    public readonly ?string $larguraEmbalagem;
-    public readonly ?string $diametroEmbalagem;
+    public readonly ?string $tipo_embalagem;
+    public readonly ?string $altura_embalagem;
+    public readonly ?string $comprimento_embalagem;
+    public readonly ?string $largura_embalagem;
+    public readonly ?string $diametro_embalagem;
     public readonly ?string $categoria;
     public readonly ?string $classe_produto;
 
@@ -64,6 +64,20 @@ class ProdutoEntity extends AbstractEntity
     public static function entityCollectionKey(): string
     {
         return 'produtos';
+    }
+
+    public static function sourceMapping(): array
+    {
+        return [
+            'tipoVariacao'=>'tipo_variacao',
+            'idProdutoPai'=>'id_produto_pai',
+            'sobEncomenda'=>'sob_encomenda',
+            'tipoEmbalagem'=>'tipo_embalagem',
+            'alturaEmbalagem'=>'altura_embalagem',
+            'comprimentoEmbalagem'=>'comprimento_embalagem',
+            'larguraEmbalagem'=>'largura_embalagem',
+            'diametroEmbalagem'=>'diametro_embalagem',
+        ];
     }
 
     public static function prepareData($data): array {

@@ -32,7 +32,7 @@ describe('Produto resource', function () {
             ->and($entity->preco_custo)->toBe('1.05')
             ->and($entity->preco_custo_medio)->toBe('1.02')
             ->and($entity->unidade)->toBe('UN')
-            ->and($entity->tipoVariacao)->toBe('P');
+            ->and($entity->tipo_variacao)->toBe('P');
     });
 
     it('should retrieve', function () {
@@ -75,15 +75,15 @@ describe('Produto resource', function () {
             ->and($entity->obs)->toBe('')
             ->and($entity->garantia)->toBe('')
             ->and($entity->cest)->toBe('01.003.00')
-            ->and($entity->tipoVariacao)->toBe('P')
-            ->and($entity->idProdutoPai)->toBe('')
+            ->and($entity->tipo_variacao)->toBe('P')
+            ->and($entity->id_produto_pai)->toBe('')
             ->and($entity->sob_encomenda)->toBe('S')
             ->and($entity->marca)->toBe('Marca do produto')
-            ->and($entity->tipoEmbalagem)->toBe('2')
-            ->and($entity->alturaEmbalagem)->toBe('26.50')
-            ->and($entity->comprimentoEmbalagem)->toBe('27.42')
-            ->and($entity->larguraEmbalagem)->toBe('28.00')
-            ->and($entity->diametroEmbalagem)->toBe('0.00')
+            ->and($entity->tipo_embalagem)->toBe('2')
+            ->and($entity->altura_embalagem)->toBe('26.50')
+            ->and($entity->comprimento_embalagem)->toBe('27.42')
+            ->and($entity->largura_embalagem)->toBe('28.00')
+            ->and($entity->diametro_embalagem)->toBe('0.00')
             ->and($entity->categoria)->toBe('Categoria pai >> Categoria filha')
             ->and($entity->classe_produto)->toBe('V')
             ->and($entity->variacoes)->toBeArray()

@@ -84,7 +84,7 @@ describe('Contato resource', function () {
             ->and($entity->email_nfe)->toBe("")
             ->and($entity->site)->toBe("")
             ->and($entity->crt)->toBe("0")
-            ->and($entity->estadoCivil)->toBe("0")
+            ->and($entity->estado_civil)->toBe("0")
             ->and($entity->profissao)->toBe("")
             ->and($entity->sexo)->toBe("")
             ->and($entity->data_nascimento)->toBe("")
