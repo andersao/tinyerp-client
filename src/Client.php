@@ -24,7 +24,7 @@ class Client
 {
     protected ClientInterface $httpClient;
 
-    public function __construct(protected string $token, ?ClientInterface $httpClient = null)
+    public function __construct(protected string $token, ?ClientInterface $httpClient = null, ?array $plugins = [])
     {
         if (empty(trim($this->token))) {
             throw new \InvalidArgumentException('Token is required');
@@ -32,10 +32,7 @@ class Client
 
         $this->httpClient = HttpClientFactory::make(
             client: $httpClient,
-            plugins: [new AuthenticationPlugin(new QueryParam([
-                'token'=>$this->token,
-                'formato'=>'json'
-            ]))]
+            plugins: array_merge($plugins, [new AuthenticationPlugin(new QueryParam(['token' => $this->token, 'formato' => 'json']))])
         );
     }
 
