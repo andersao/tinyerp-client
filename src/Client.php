@@ -32,7 +32,10 @@ class Client
 
         $this->httpClient = HttpClientFactory::make(
             client: $httpClient,
-            plugins: [new AuthenticationPlugin(new QueryParam(['token'=>$this->token]))]
+            plugins: [new AuthenticationPlugin(new QueryParam([
+                'token'=>$this->token,
+                'formato'=>'json'
+            ]))]
         );
     }
 

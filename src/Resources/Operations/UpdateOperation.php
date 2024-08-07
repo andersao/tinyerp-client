@@ -19,7 +19,7 @@ trait UpdateOperation
 
     public function updatePath(): string
     {
-        return sprintf('/api2/%s.alterar.php', $this->entityKey());
+        return sprintf('api2/%s.alterar.php', $this->entityKey());
     }
 
     public function updateFormParamName() : ?string

@@ -26,17 +26,17 @@ class GrupoTagResource extends AbstractResource
 
     public function searchPath(): string
     {
-        return '/api2/grupo.tag.pesquisa.php';
+        return 'api2/grupo.tag.pesquisa.php';
     }
 
     public function createPath(): string
     {
-        return '/api2/grupo.tag.incluir.php';
+        return 'api2/grupo.tag.incluir.php';
     }
 
     public function updatePath(): string
     {
-        return '/api2/grupo.tag.alterar.php';
+        return 'api2/grupo.tag.alterar.php';
     }
 
     public function entityKey(): string {

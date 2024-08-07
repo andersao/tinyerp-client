@@ -26,7 +26,7 @@ class ListaPrecoResource extends AbstractResource
 
     public function searchPath(): string
     {
-        return '/api2/listas.precos.pesquisa.php';
+        return 'api2/listas.precos.pesquisa.php';
     }
 
     public function entityKey(): string

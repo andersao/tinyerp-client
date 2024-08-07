@@ -30,17 +30,17 @@ class ContaPagarResource extends AbstractResource
 
     public function searchPath(): string
     {
-        return '/api2/contas.pagar.pesquisa.php';
+        return 'api2/contas.pagar.pesquisa.php';
     }
 
     public function createPath(): string
     {
-        return '/api2/conta.pagar.incluir.php';
+        return 'api2/conta.pagar.incluir.php';
     }
 
     public function retrievePath(): string
     {
-        return '/api2/conta.pagar.obter.php';
+        return 'api2/conta.pagar.obter.php';
     }
 
     public function entityKey(): string

@@ -15,7 +15,7 @@ trait SearchOperation
 {
     public function searchPath(): string
     {
-        return sprintf('/api2/%s.pesquisa.php', $this->entityCollectionKey());
+        return sprintf('api2/%s.pesquisa.php', $this->entityCollectionKey());
     }
 
     /**

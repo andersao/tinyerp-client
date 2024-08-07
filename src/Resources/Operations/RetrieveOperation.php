@@ -15,7 +15,7 @@ trait RetrieveOperation
 {
     public function retrievePath(): string
     {
-        return sprintf('/api2/%s.obter.php', $this->entityKey());
+        return sprintf('api2/%s.obter.php', $this->entityKey());
     }
 
     /**

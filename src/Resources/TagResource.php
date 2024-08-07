@@ -32,17 +32,17 @@ class TagResource extends AbstractResource
 
     public function createPath(): string
     {
-        return '/api2/tag.incluir.php';
+        return 'api2/tag.incluir.php';
     }
 
     public function updatePath(): string
     {
-        return '/api2/tag.alterar.php';
+        return 'api2/tag.alterar.php';
     }
 
     public function searchPath(): string
     {
-        return '/api2/tag.pesquisa.php';
+        return 'api2/tag.pesquisa.php';
     }
 
     public function entityKey(): string {

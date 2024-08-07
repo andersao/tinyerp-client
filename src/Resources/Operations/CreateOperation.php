@@ -21,7 +21,7 @@ trait CreateOperation
 
     public function createPath(): string
     {
-        return sprintf('/api2/%s.incluir.php', $this->entityKey());
+        return sprintf('api2/%s.incluir.php', $this->entityKey());
     }
 
     public function createFormParamName() : ?string

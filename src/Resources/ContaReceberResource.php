@@ -32,22 +32,22 @@ class ContaReceberResource extends AbstractResource
 
     public function searchPath(): string
     {
-        return '/api2/contas.receber.pesquisa.php';
+        return 'api2/contas.receber.pesquisa.php';
     }
 
     public function createPath(): string
     {
-        return '/api2/conta.receber.incluir.php';
+        return 'api2/conta.receber.incluir.php';
     }
 
     public function updatePath(): string
     {
-        return '/api2/conta.receber.alterar.php';
+        return 'api2/conta.receber.alterar.php';
     }
 
     public function retrievePath(): string
     {
-        return '/api2/conta.receber.obter.php';
+        return 'api2/conta.receber.obter.php';
     }
 
     public function entityKey(): string
