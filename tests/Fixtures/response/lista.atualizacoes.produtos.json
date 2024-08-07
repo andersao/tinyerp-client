@@ -1,0 +1,30 @@
+{
+  "retorno": {
+    "status_processamento": 3,
+    "status": "OK",
+    "pagina": "1",
+    "numero_paginas": "1",
+    "produtos": [
+      {
+        "produto": {
+          "id": 46829062,
+          "codigo": 123,
+          "nome": "produto teste",
+          "unidade": "UN",
+          "preco": "1.20",
+          "data_alteracao": "01/01/2012 15:25:55"
+        }
+      },
+      {
+        "produto": {
+          "id": 46829066,
+          "codigo": 1234,
+          "nome": "produto teste 2",
+          "unidade": "PC",
+          "preco": "15.25",
+          "data_alteracao": "01/01/2012 15:25:55"
+        }
+      }
+    ]
+  }
+}

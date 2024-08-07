@@ -1,0 +1,40 @@
+{
+  "retorno": {
+    "status_processamento": "3",
+    "status": "OK",
+    "produto": {
+      "id": "46829062",
+      "codigo": "123",
+      "nome": "produto teste",
+      "unidade": "UN",
+      "saldo": 10,
+      "saldoReservado": 3,
+      "depositos": [
+        {
+          "deposito": {
+            "nome": "Deposito 1",
+            "desconsiderar": "N",
+            "saldo": 5,
+            "empresa": "Tiny"
+          }
+        },
+        {
+          "deposito": {
+            "nome": "Deposito 2",
+            "desconsiderar": "N",
+            "saldo": 5,
+            "empresa": "Tiny"
+          }
+        },
+        {
+          "deposito": {
+            "nome": "Deposito 3",
+            "desconsiderar": "N",
+            "saldo": 0,
+            "empresa": "Tiny"
+          }
+        }
+      ]
+    }
+  }
+}

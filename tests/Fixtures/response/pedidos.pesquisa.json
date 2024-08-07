@@ -1,0 +1,38 @@
+{
+  "retorno": {
+    "status_processamento": 3,
+    "status": "OK",
+    "pagina": "1",
+    "numero_paginas": "1",
+    "pedidos": [
+      {
+        "pedido": {
+          "id": 123456,
+          "numero": 123456,
+          "numero_ecommerce": "12",
+          "data_pedido": "01/01/2013",
+          "data_prevista": "10/01/2013",
+          "nome": "Cliente Teste",
+          "valor": "100.25",
+          "id_vendedor": "123456",
+          "nome_vendedor": "Vendedor Teste",
+          "situacao": "Atendido"
+        }
+      },
+      {
+        "pedido": {
+          "id": 123456,
+          "numero": 123458,
+          "numero_ecommerce": "15",
+          "data_pedido": "01/01/2013",
+          "data_prevista": "10/01/2013",
+          "nome": "Cliente Teste 3",
+          "valor": "50.25",
+          "id_vendedor": "",
+          "nome_vendedor": "",
+          "situacao": "Aberto"
+        }
+      }
+    ]
+  }
+}

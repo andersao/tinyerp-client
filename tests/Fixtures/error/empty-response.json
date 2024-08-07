@@ -1,0 +1,12 @@
+{
+  "retorno": {
+    "status_processamento": 2,
+    "status": "Erro",
+    "codigo_erro": 20,
+    "erros": [
+      {
+        "erro": "A Consulta não retornou registros"
+      }
+    ]
+  }
+}

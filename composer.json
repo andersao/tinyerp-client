@@ -1,0 +1,50 @@
+{
+  "name": "prettus/tinyerp-client",
+  "description": "Tiny ERP Api v2 Client",
+  "keywords": [
+    "tinyerp",
+    "erp"
+  ],
+  "authors": [
+    {
+      "name": "Anderson Andrade",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "psr/http-message": "^1.0",
+    "psr/http-client-implementation": "^1.0",
+    "php-http/httplug": "^2.0",
+    "php-http/message-factory": "^1.0",
+    "php-http/discovery": "^1.19",
+    "symfony/http-client": "^7.1",
+    "php-http/client-common": "^2.7",
+    "cuyz/valinor": "^1.12"
+  },
+  "require-dev": {
+    "pestphp/pest": "^2.34",
+    "php-http/mock-client": "^1.0",
+    "php-http/message": "^1.0",
+    "guzzlehttp/psr7": "^1.0",
+    "http-interop/http-factory-guzzle": "^1.2",
+    "mockery/mockery": "^1.6",
+    "phpstan/phpstan": "^1.11"
+  },
+  "autoload": {
+    "psr-4": {
+      "Prettus\\TinyERP\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true,
+      "php-http/discovery": true
+    }
+  }
+}

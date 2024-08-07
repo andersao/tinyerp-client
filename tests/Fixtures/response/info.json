@@ -1,0 +1,22 @@
+{
+  "retorno": {
+    "status_processamento": 3,
+    "status": "OK",
+    "conta": {
+      "razao_social": "Empresa Ltda",
+      "cnpj_cpf": "00.000.000/0001-00",
+      "fantasia": "Empresa",
+      "endereco": "Rua X",
+      "numero": "18",
+      "bairro": "Centro",
+      "complemento": "Bloco A",
+      "cidade": "Bento Gonçalves",
+      "estado": "RS",
+      "cep": "95.700-000",
+      "fone": "(54) 99999-9999",
+      "email": "tiny@tiny.com.br",
+      "inscricao_estadual": "0000000-00",
+      "regime_tributario": "Simples Nacional"
+    }
+  }
+}

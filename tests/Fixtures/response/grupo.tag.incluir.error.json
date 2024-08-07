@@ -1,0 +1,20 @@
+{
+  "retorno": {
+    "status_processamento": 2,
+    "status": "Erro",
+    "registros": [
+      {
+        "registro": {
+          "sequencia": "1",
+          "status": "Erro",
+          "codigo_erro": "30",
+          "erros": [
+            {
+              "erro": "Registro em duplicidade"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

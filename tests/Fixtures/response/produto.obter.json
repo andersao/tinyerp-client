@@ -1,0 +1,93 @@
+{
+  "retorno": {
+    "status_processamento": "3",
+    "status": "OK",
+    "produto": {
+      "id": "349112581",
+      "codigo": "123",
+      "nome": "produto teste",
+      "unidade": "UN",
+      "preco": 0,
+      "preco_promocional": 0,
+      "ncm": "",
+      "origem": "0",
+      "gtin": "",
+      "gtin_embalagem": "",
+      "localizacao": "",
+      "peso_liquido": 0,
+      "peso_bruto": 0,
+      "estoque_minimo": 0,
+      "estoque_maximo": 0,
+      "id_fornecedor": 0,
+      "codigo_fornecedor": "",
+      "codigo_pelo_fornecedor": "",
+      "unidade_por_caixa": "",
+      "preco_custo": 0,
+      "preco_custo_medio": 0,
+      "situacao": "A",
+      "tipo": "P",
+      "classe_ipi": "",
+      "valor_ipi_fixo": "0",
+      "cod_lista_servicos": "",
+      "descricao_complementar": "",
+      "obs": "",
+      "garantia": "",
+      "cest": "01.003.00",
+      "tipoVariacao": "P",
+      "variacoes": [
+        {
+          "variacao": {
+            "id": "323221231",
+            "codigo": "123 - 1",
+            "preco": "36.3200000000",
+            "grade": {
+              "Tamanho": "GG",
+              "Cor": "Branco"
+            }
+          }
+        },
+        {
+          "variacao": {
+            "id": "323221232",
+            "codigo": "123 - 2",
+            "preco": "34.3400000000",
+            "grade": {
+              "Tamanho": "G",
+              "Cor": "Branco"
+            }
+          }
+        }
+      ],
+      "idProdutoPai": "",
+      "sob_encomenda": "S",
+      "marca": "Marca do produto",
+      "tipoEmbalagem": "2",
+      "alturaEmbalagem": "26.50",
+      "comprimentoEmbalagem": "27.42",
+      "larguraEmbalagem": "28.00",
+      "diametroEmbalagem": "0.00",
+      "categoria": "Categoria pai >> Categoria filha",
+      "anexos": [
+        {
+          "anexo": "http://minhalojavirtualtiny.com.br/images/45221.jpg"
+        },
+        {
+          "anexo": "http://minhalojavirtualtiny.com.br/images/45222.png"
+        }
+      ],
+      "imagens_externas": [
+        {
+          "imagem_externa": {
+            "url": "http://outrositetiny.com.br/img_43.png"
+          }
+        },
+        {
+          "imagem_externa": {
+            "url": "http://outrositetiny.com.br/img_44.png"
+          }
+        }
+      ],
+      "classe_produto": "V"
+    }
+  }
+}

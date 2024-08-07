@@ -1,0 +1,24 @@
+{
+  "retorno": {
+    "status_processamento": 3,
+    "status": "OK",
+    "pagina": "1",
+    "numero_paginas": "1",
+    "registros": [
+      {
+        "registro": {
+          "id": 117991558,
+          "descricao": "Amigos",
+          "acrescimo_desconto": -5
+        }
+      },
+      {
+        "registro": {
+          "id": 303755803,
+          "descricao": "Atacado",
+          "acrescimo_desconto": -10
+        }
+      }
+    ]
+  }
+}

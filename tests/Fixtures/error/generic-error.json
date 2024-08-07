@@ -1,0 +1,12 @@
+{
+  "retorno": {
+    "status_processamento": 1,
+    "status": "Erro",
+    "codigo_erro": 99,
+    "erros": [
+      {
+        "erro": "Sistema em manutenção"
+      }
+    ]
+  }
+}

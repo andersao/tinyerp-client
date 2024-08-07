@@ -1,0 +1,105 @@
+{
+  "retorno": {
+    "status_processamento": "3",
+    "status": "OK",
+    "pedido": {
+      "id": "123456",
+      "numero": "123",
+      "data_pedido": "01/01/2012",
+      "data_prevista": "10/01/2012",
+      "data_faturamento": "09/01/2012",
+      "cliente": {
+        "codigo": "1235",
+        "nome": "Contato Teste 2",
+        "nome_fantasia": "Fantasia Contato Teste 2",
+        "tipo_pessoa": "F",
+        "cpf_cnpj": "22755777850",
+        "ie": "",
+        "rg": "1234567890",
+        "endereco": "Rua Teste",
+        "numero": "123",
+        "complemento": "sala 2",
+        "bairro": "Teste",
+        "cep": "95700000",
+        "cidade": "Bento Gonçalves",
+        "uf": "RS",
+        "fone": "5412345678"
+      },
+      "itens": [
+        {
+          "item": {
+            "codigo": "1234",
+            "descricao": "Produto Teste 1",
+            "unidade": "UN",
+            "quantidade": "2",
+            "valor_unitario": "50.25"
+          }
+        },
+        {
+          "item": {
+            "codigo": "1235",
+            "descricao": "Produto Teste 2",
+            "unidade": "UN",
+            "quantidade": "4",
+            "valor_unitario": "15.25"
+          }
+        }
+      ],
+      "parcelas": [
+        {
+          "parcela": {
+            "dias": "30",
+            "data": "29/11/2012",
+            "valor": "53.84",
+            "obs": "Obs Parcela 1"
+          }
+        },
+        {
+          "parcela": {
+            "dias": "60",
+            "data": "29/12/2012",
+            "valor": "53.83",
+            "obs": "Obs Parcela 2"
+          }
+        },
+        {
+          "parcela": {
+            "dias": "90",
+            "data": "27/01/2013",
+            "valor": "53.83",
+            "obs": "Obs Parcela 3"
+          }
+        }
+      ],
+      "marcadores": [
+        {
+          "marcador": {
+            "id": "149238",
+            "descricao": "Teste",
+            "cor": "#808080"
+          }
+        }
+      ],
+      "condicao_pagamento": "30 60 90",
+      "forma_pagamento": "crediario",
+      "meio_pagamento": "Dinheiro",
+      "nome_transportador": "transportador teste",
+      "frete_por_conta": "E",
+      "valor_frete": "35.00",
+      "valor_desconto": "35.00",
+      "total_produtos": "161.50",
+      "total_pedido": "161.50",
+      "numero_ordem_compra": "123",
+      "deposito": "Teste",
+      "forma_envio": "C",
+      "forma_frete": "SEDEX - CONTRATO (40436)",
+      "situacao": "Em aberto",
+      "obs": "Observação Teste",
+      "id_vendedor": "0",
+      "nome_vendedor": "",
+      "codigo_rastreamento": "TINY90831920321BR",
+      "url_rastreamento": "http://urlrastreamento.com.br",
+      "id_nota_fiscal": "0"
+    }
+  }
+}

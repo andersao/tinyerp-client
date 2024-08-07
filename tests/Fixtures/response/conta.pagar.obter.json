@@ -1,0 +1,38 @@
+{
+  "retorno": {
+    "status_processamento": "3",
+    "status": "OK",
+    "conta": {
+      "id": "433224432",
+      "data": "25/11/2015",
+      "vencimento": "28/10/2016",
+      "valor": "6565.00",
+      "nro_documento": "000065205",
+      "competencia": "10/2016",
+      "saldo": "6565.00",
+      "cliente": {
+        "codigo": "",
+        "nome": "Henrique Teste 4100",
+        "tipo_pessoa": "J",
+        "cpf_cnpj": "54.544.826/0001-40",
+        "ie": "ISENTO",
+        "rg": "",
+        "endereco": "afdsafsd",
+        "numero": "2123",
+        "complemento": "213213",
+        "bairro": "bababa",
+        "cep": "15.200-000",
+        "cidade": "José Bonifácio",
+        "uf": "SP",
+        "pais": null,
+        "fone": "",
+        "email": ""
+      },
+      "historico": "historico - mensal - henrique teste 4100",
+      "categoria": "Telecomunicação, internet",
+      "situacao": "aberto",
+      "ocorrencia": "M",
+      "dia_vencimento": "28"
+    }
+  }
+}

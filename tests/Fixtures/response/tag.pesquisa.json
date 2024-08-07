@@ -1,0 +1,26 @@
+{
+  "retorno": {
+    "status_processamento": 3,
+    "status": "OK",
+    "pagina": "1",
+    "numero_paginas": "1",
+    "registros": [
+      {
+        "registro": {
+          "id": "46829060",
+          "nome": "nova",
+          "id_grupo": "46829059",
+          "grupo": "Teste de Grupo 3"
+        }
+      },
+      {
+        "registro": {
+          "id": "46829061",
+          "nome": "Tag teste",
+          "id_grupo": "46829059",
+          "grupo": "Teste de Grupo 3"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "retorno": {
+    "status_processamento": "3",
+    "status": "OK",
+    "produto": {
+      "id": "46829062",
+      "codigo": "123",
+      "nome": "produto teste",
+      "tags": [
+        {
+          "tag": {
+            "id_tag": "7399555",
+            "nome_tag": "Azul"
+          }
+        },
+        {
+          "tag": {
+            "id_tag": "6301492",
+            "nome_tag": "caderno"
+          }
+        },
+        {
+          "tag": {
+            "id_tag": "38796028",
+            "nome_tag": "marca x"
+          }
+        },
+        {
+          "tag": {
+            "id_tag": "8782636",
+            "nome_tag": "M"
+          }
+        }
+      ]
+    }
+  }
+}

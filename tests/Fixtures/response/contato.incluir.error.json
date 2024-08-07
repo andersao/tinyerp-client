@@ -1,0 +1,26 @@
+{
+  "retorno": {
+    "status_processamento": "2",
+    "status": "Erro",
+    "registros": [
+      {
+        "registro": {
+          "sequencia": "",
+          "status": "Erro",
+          "codigo_erro": "31",
+          "erros": [
+            {
+              "erro": "O número de sequência deve ser informado"
+            },
+            {
+              "erro": "O nome do contato deve ser informado"
+            },
+            {
+              "erro": "A situação do contato deve ser informada"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
