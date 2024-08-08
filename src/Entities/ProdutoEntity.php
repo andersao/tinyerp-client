@@ -45,6 +45,13 @@ class ProdutoEntity extends AbstractEntity
     public readonly ?float $diametro_embalagem;
     public readonly ?string $categoria;
     public readonly ?string $classe_produto;
+    public readonly ?string $seo_title;
+    public readonly ?string $seo_keywords;
+    public readonly ?string $link_video;
+    public readonly ?string $seo_description;
+    public readonly ?string $slug;
+    public readonly ?int $qtd_volumes;
+    public readonly ?int $dias_preparacao;
 
     /**
      * @var ProdutoVariacaoEntity[]|null $variacoes

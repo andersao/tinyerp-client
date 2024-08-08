@@ -73,7 +73,7 @@ class ContatoEntity extends AbstractEntity
         if(isset($data['pessoas_contato']) && is_array($data['pessoas_contato'])) {
             $data['pessoas_contato'] = array_map(fn($item) => [
                 ...$item['pessoa_contato'],
-                'id' => $item['id_pessoa'],
+                'id' => $item['pessoa_contato']['id_pessoa'],
             ], $data['pessoas_contato']);
         }
 
