@@ -81,6 +81,16 @@ class PedidoEntity extends AbstractEntity
             $data['parcelas'] = array_map(fn($item) => $item['parcela'], $data['parcelas']);
         }
 
+        if(isset($data['ecommerce'])) {
+            $ecommerce = $data['ecommerce'];
+            $data['ecommerce'] = [
+                'id' => $ecommerce['id'],
+                'nome' => $ecommerce['nomeEcommerce'],
+                'numero_pedido' => $ecommerce['numeroPedidoEcommerce'],
+                'numero_pedido_canal_venda' => $ecommerce['numeroPedidoCanalVenda'],
+            ];
+        }
+
         return $data;
     }
 }

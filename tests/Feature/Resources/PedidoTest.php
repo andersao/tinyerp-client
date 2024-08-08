@@ -84,6 +84,7 @@ describe('Pedido resource', function () {
         $marcador = $entity->marcadores[0];
         $parcela = $entity->parcelas[0];
         $item = $entity->itens[0];
+        $ecomm = $entity->ecommerce;
 
         expect($marcador->id)->toBe(149238)
             ->and($marcador->descricao)->toBe('Teste')
@@ -96,7 +97,11 @@ describe('Pedido resource', function () {
             ->and($item->descricao)->toBe('Produto Teste 1')
             ->and($item->unidade)->toBe('UN')
             ->and($item->quantidade)->toBe(2.0)
-            ->and($item->valor_unitario)->toBe(50.25);
+            ->and($item->valor_unitario)->toBe(50.25)
+            ->and($ecomm->id)->toBe(112)
+            ->and($ecomm->nome)->toBe('Nuvemshop')
+            ->and($ecomm->numero_pedido)->toBe('125')
+            ->and($ecomm->numero_pedido_canal_venda)->toBe('');
     });
 
     it('should create', function () {
