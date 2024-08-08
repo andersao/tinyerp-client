@@ -54,6 +54,11 @@ class ContatoEntity extends AbstractEntity
     public readonly ?string $data_atualizacao;
     public readonly ?array $tipos_contato;
 
+    /**
+     * @var ContatoPessoaEntity[]|null
+     */
+    public readonly ?array $pessoas_contato;
+
     public static function entityKey(): string
     {
         return 'contato';
