@@ -88,8 +88,12 @@ class ProdutoEntity extends AbstractEntity
             $data['idProdutoPai'] = !empty($data['idProdutoPai']) ? $data['idProdutoPai'] : null;
         }
 
-        if(isset($data['variacoes']) && is_array($data['variacoes'])) {
-            $data['variacoes'] = array_map(fn($item) => $item['variacao'], $data['variacoes']);
+        if(isset($data['variacoes'])) {
+            if(is_array($data['variacoes'])) {
+                $data['variacoes'] = array_map(fn($item) => $item['variacao'], $data['variacoes']);
+            } else {
+                $data['variacoes'] = [];
+            }
         }
 
         if(isset($data['anexos']) && is_array($data['anexos'])) {
