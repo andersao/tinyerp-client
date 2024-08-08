@@ -52,6 +52,7 @@ class ProdutoEntity extends AbstractEntity
     public readonly ?string $slug;
     public readonly ?int $qtd_volumes;
     public readonly ?int $dias_preparacao;
+    public readonly ?array $grade;
 
     /**
      * @var ProdutoVariacaoEntity[]|null $variacoes
@@ -85,6 +86,16 @@ class ProdutoEntity extends AbstractEntity
             'larguraEmbalagem'=>'largura_embalagem',
             'diametroEmbalagem'=>'diametro_embalagem',
         ];
+    }
+
+    public function cor(): ?array
+    {
+        return $this->grade ?? ($this->grade['cor'] ?? $this->grade['Cor'] ?? null);
+    }
+
+    public function tamanho(): ?string
+    {
+        return $this->grade ?? ($this->grade['tamanho'] ?? $this->grade['Tamanho'] ?? null);
     }
 
     public static function prepareData($data): array {
