@@ -99,7 +99,13 @@
       "nome_vendedor": "",
       "codigo_rastreamento": "TINY90831920321BR",
       "url_rastreamento": "http://urlrastreamento.com.br",
-      "id_nota_fiscal": "0"
+      "id_nota_fiscal": "0",
+      "ecommerce": {
+        "id": "112",
+        "numeroPedidoEcommerce": "125",
+        "numeroPedidoCanalVenda": "",
+        "nomeEcommerce": "Nuvemshop"
+      }
     }
   }
 }

@@ -33,6 +33,7 @@ class PedidoEntity extends AbstractEntity
     public readonly ?string $url_rastreamento;
     public readonly ?int $id_nota_fiscal;
     public readonly ?PedidoClienteEntity $cliente;
+    public readonly ?PedidoEcommerceEntity $ecommerce;
 
     /**
      * @var PedidoMarcadorEntity[]|null
