@@ -88,14 +88,14 @@ class ProdutoEntity extends AbstractEntity
         ];
     }
 
-    public function cor(): ?array
+    public function cor(): ?string
     {
-        return $this->grade ?? ($this->grade['cor'] ?? $this->grade['Cor'] ?? null);
+        return is_array($this->grade) ? ($this->grade['cor'] ?? $this->grade['Cor'] ?? null) : null;
     }
 
     public function tamanho(): ?string
     {
-        return $this->grade ?? ($this->grade['tamanho'] ?? $this->grade['Tamanho'] ?? null);
+        return is_array($this->grade)  ? ($this->grade['tamanho'] ?? $this->grade['Tamanho'] ?? null) : null;
     }
 
     public static function prepareData($data): array {
