@@ -221,4 +221,21 @@ describe('Produto resource', function () {
             ->and($produto->id)->toBe(46829062)
             ->and($produto->nome)->toBe('produto teste');
     });
+
+    it('should get categories tree', function () {
+        $fixture = loadFixture('response/produtos.categorias.arvore.json');
+        list($client) = mockTinyClient('GET', '/api2/produtos.categorias.arvore.php', $fixture);
+        $categorias = $client->produto()->getArvoreCategorias();
+        $categoria = $categorias[0];
+        $child = $categoria->nodes[0];
+
+        expect($categorias)->toBeArray()
+            ->and($categorias)->toHaveCount(3)
+            ->and($categoria->id)->toBe(440269263)
+            ->and($categoria->descricao)->toBe('Roupas')
+            ->and($categoria->nodes)->toHaveCount(2)
+            ->and($child->id)->toBe(440292323)
+            ->and($child->descricao)->toBe('Masculino')
+            ->and($child->nodes)->toHaveCount(0);
+    });
 });

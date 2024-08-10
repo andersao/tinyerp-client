@@ -4,6 +4,8 @@ namespace Prettus\TinyERP\Traits;
 
 use CuyZ\Valinor\Mapper\MappingError;
 use CuyZ\Valinor\Mapper\Source\Source;
+use CuyZ\Valinor\Mapper\TreeMapper;
+use CuyZ\Valinor\MapperBuilder;
 
 trait HasMapperBuilder
 {
@@ -12,13 +14,22 @@ trait HasMapperBuilder
      */
     public static function from($data): static
     {
+        return static::treeMapper()
+            ->map(static::class, static::source(static::prepareData($data)));
+    }
+
+    public static function mapperBuilder(): MapperBuilder
+    {
         $mapper = new \CuyZ\Valinor\MapperBuilder();
         return $mapper
             ->allowSuperfluousKeys()
             ->enableFlexibleCasting()
-            ->allowPermissiveTypes()
-            ->mapper()
-            ->map(static::class, static::source(static::prepareData($data)));
+            ->allowPermissiveTypes();
+    }
+
+    public static function treeMapper(): TreeMapper
+    {
+        return static::mapperBuilder()->mapper();
     }
 
     public static function sourceMapping(): array

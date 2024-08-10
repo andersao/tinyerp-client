@@ -2,6 +2,7 @@
 
 namespace Prettus\TinyERP\Resources;
 
+use Prettus\TinyERP\Entities\CategoriaEntity;
 use Prettus\TinyERP\Entities\ProdutoAlteradoEntity;
 use Prettus\TinyERP\Entities\ProdutoEntity;
 use Prettus\TinyERP\Entities\ProdutoEstoqueEntity;
@@ -49,6 +50,15 @@ class ProdutoResource extends AbstractResource
         $body = json_decode($response->getBody()->getContents(), true);
         $tags = $body['retorno']['produto']['tags'];
         return array_map(fn($tag) => TagEntity::from($tag['tag']), $tags);
+    }
+
+    public function getArvoreCategorias(): array
+    {
+        $endpoint = 'https://api.tiny.com.br/api2/produtos.categorias.arvore.php';
+        $response = $this->client->get($endpoint);
+        $body = json_decode($response->getBody()->getContents(), true);
+        $categorias = $body['retorno']['categorias'] ?? [];
+        return array_map(fn($categoria) => CategoriaEntity::from($categoria), $categorias);
     }
 
     public function getModified(array $params): array
