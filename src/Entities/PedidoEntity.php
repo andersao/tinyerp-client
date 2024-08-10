@@ -27,6 +27,8 @@ class PedidoEntity extends AbstractEntity
     public readonly ?string $forma_frete;
     public readonly ?string $situacao;
     public readonly ?string $obs;
+
+    public readonly ?string $obs_interna;
     public readonly ?int $id_vendedor;
     public readonly ?string $nome_vendedor;
     public readonly ?string $codigo_rastreamento;
