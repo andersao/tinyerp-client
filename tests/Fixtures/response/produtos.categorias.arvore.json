@@ -1,64 +1,60 @@
 {
-  "retorno": {
-    "status_processamento": "3",
-    "status": "OK",
-    "categorias": [
-      {
-        "id": "440269263",
-        "descricao": "Roupas",
-        "nodes": [
-          {
-            "id": "440292323",
-            "descricao": "Masculino",
-            "nodes": []
-          },
-          {
-            "id": "440490942",
-            "descricao": "Feminino",
-            "nodes": []
-          }
-        ]
-      },
-      {
-        "id": "440456885",
-        "descricao": "Decoração",
-        "nodes": [
-          {
-            "id": "440456888",
-            "descricao": "Casa",
-            "nodes": [
-              {
-                "id": "440456891",
-                "descricao": "440456891",
-                "nodes": []
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "440430710",
-        "descricao": "Teste",
-        "nodes": [
-          {
-            "id": "440430711",
-            "descricao": "Teste 1",
-            "nodes": [
-              {
-                "id": "440430712",
-                "descricao": "Teste 2",
-                "nodes": [
-                  {
-                    "id": "440430713",
-                    "descricao": "Teste 3",
-                    "nodes": []
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
+  "retorno": [
+    {
+      "id": "440269263",
+      "descricao": "Roupas",
+      "nodes": [
+        {
+          "id": "440292323",
+          "descricao": "Masculino",
+          "nodes": []
+        },
+        {
+          "id": "440490942",
+          "descricao": "Feminino",
+          "nodes": []
+        }
+      ]
+    },
+    {
+      "id": "440456885",
+      "descricao": "Decoração",
+      "nodes": [
+        {
+          "id": "440456888",
+          "descricao": "Casa",
+          "nodes": [
+            {
+              "id": "440456891",
+              "descricao": "440456891",
+              "nodes": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "440430710",
+      "descricao": "Teste",
+      "nodes": [
+        {
+          "id": "440430711",
+          "descricao": "Teste 1",
+          "nodes": [
+            {
+              "id": "440430712",
+              "descricao": "Teste 2",
+              "nodes": [
+                {
+                  "id": "440430713",
+                  "descricao": "Teste 3",
+                  "nodes": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -57,7 +57,7 @@ class ProdutoResource extends AbstractResource
         $endpoint = 'https://api.tiny.com.br/api2/produtos.categorias.arvore.php';
         $response = $this->client->get($endpoint);
         $body = json_decode($response->getBody()->getContents(), true);
-        $categorias = $body['retorno']['categorias'] ?? [];
+        $categorias = $body['retorno'] ?? [];
         return array_map(fn($categoria) => CategoriaEntity::from($categoria), $categorias);
     }
 
